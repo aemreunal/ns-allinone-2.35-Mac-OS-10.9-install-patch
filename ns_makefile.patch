@@ -1,0 +1,11 @@
+--- Makefile	2014-02-25 21:23:03.000000000 +0200
++++ Makefile_patched	2014-02-25 00:17:32.000000000 +0200
+@@ -85,7 +85,7 @@
+ 	-lm -lm -framework CoreFoundation -lstdc++.6
+ #	-L${exec_prefix}/lib \
+ 
+-CFLAGS	+= $(CCOPT) $(DEFINE) 
++CFLAGS	+= $(CCOPT) $(DEFINE) -stdlib=libstdc++
+ 
+ # Explicitly define compilation rules since SunOS 4's make doesn't like gcc.
+ # Also, gcc does not remove the .o before forking 'as', which can be a

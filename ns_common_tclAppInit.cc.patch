@@ -1,0 +1,11 @@
+--- tclAppInit.cc	2014-02-25 21:28:59.000000000 +0200
++++ tclAppInit_patched.cc	2014-02-25 00:19:21.000000000 +0200
+@@ -237,7 +237,7 @@
+ Tcl_AppInit(Tcl_Interp *interp)
+ {
+ #ifdef MEMDEBUG_SIMULATIONS
+-        extern MemTrace *globalMemTrace;
++        
+         globalMemTrace = new MemTrace;
+ #endif
+ 
